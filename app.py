@@ -4,12 +4,8 @@ import numpy as np
 import joblib
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import LabelEncoder
-
-# Load the saved model, scaler, and feature names
 linear_model = joblib.load('linear_regression_hp.pkl')
 scaler = joblib.load('scaler.pkl')
-
-# Load feature names to maintain the correct order
 with open('feature_names.pkl', 'rb') as f:
     feature_names = joblib.load(f)
 
